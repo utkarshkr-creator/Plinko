@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { BallManager } from "../game/classes/BallManager"
 import { WIDTH } from "../utils/Common_Constant";
 import { Quotes } from "../components/Quotes";
-import { FoundIssue } from "../components/FoundIssue";
 import { pad } from "../utils/Value_padding";
 import { DemoGame } from "../components/DemoGame";
 
@@ -43,7 +42,7 @@ export function Home() {
   useEffect(() => {
     if (convasRef.current) {
       const ballManager = new BallManager(
-        convasRef.current as unknown as HTMLCanvasElement,
+        convasRef.current,
         (index: number, startX?: number) => {
           setOutputs((outputs: any) => {
             return {

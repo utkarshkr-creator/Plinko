@@ -67,11 +67,11 @@ export class BallManager {
 
   drawSinks() {
     this.ctx.fillStyle = 'green';
-    const SPACING = obstacleRadius * 2;
+    const SPACING = obstacleRadius * 2 - 4;
     for (let i = 0; i < this.sinks.length; i++) {
       this.ctx.fillStyle = this.getColor(i).background;
       const sink = this.sinks[i];
-      this.ctx.font = 'normal 13px Arial';
+      this.ctx.font = 'bold 13px Arial';
       this.ctx.fillRect(sink.x, sink.y - sink.height / 2, sink.width - SPACING, sink.height);
       this.ctx.fillStyle = this.getColor(i).color;
       this.ctx.fillText((sink?.multiplier)?.toString() + 'x', sink.x - 15 + sinkWidth / 2, sink.y);

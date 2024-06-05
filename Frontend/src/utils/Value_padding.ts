@@ -7,3 +7,6 @@ export function pad(n: number) {
 export function unpad(n: number) {
   return Math.floor(n / DECIMAL_MULTIPLIER);
 }
+export function unpadInDecimal(n: number) {
+  return (n / DECIMAL_MULTIPLIER);
+}

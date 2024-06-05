@@ -4,6 +4,7 @@ import cors from 'cors';
 import { outcomes } from "./outcomes";
 
 const app = express();
+app.use(express.json())
 app.use(cors());
 
 const TOTAL_DROPS = 16;
@@ -31,7 +32,7 @@ const MULTIPLIERS: { [key: number]: number } = {
 app.post("/game", (req, res) => {
   let outcome = 0;
   const pattern = [];
-
+  let betAmount = req.body.betAmount;
   for (let i = 0; i < TOTAL_DROPS; i++) {
     if (Math.random() > 0.5) {
       pattern.push("R");
@@ -43,10 +44,11 @@ app.post("/game", (req, res) => {
 
   const multiplier = MULTIPLIERS[outcome];
   const possibleOutcomes = outcomes[outcome];
-
+  const resultAmount = betAmount * multiplier;
   return res.send({
     point: possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length || 0)],
-    multiplier,
+    resultAmount,
+    multi: multiplier,
     pattern
   });
 })
