@@ -69,6 +69,7 @@ After setting up the project, open your browser and go to:
   - TypeScript
 ## Images
 <img width="1504" alt="Screenshot 2024-06-19 at 12 06 43 AM" src="https://github.com/utkarshkr-creator/Plinko/assets/66742842/b763aca3-2a52-42b9-b28c-4d2606eb9411">
+
 ## Video
 
 https://github.com/utkarshkr-creator/Plinko/assets/66742842/16e86e47-37e9-4560-a62a-b9c0c9b8d878
