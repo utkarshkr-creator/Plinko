@@ -9,7 +9,7 @@ This is a replication of the Plinko game on Stake, implemented using React, Node
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Images](#images)
-
+- [Video](#video)
 ## Introduction
 This project demonstrates a replication of the Plinko game on Stake, with enhanced security features and a physics-based UI for visualizing the ball's path.
 
@@ -29,28 +29,34 @@ cd <repository-folder>
 ```
 ### Set Up Backend
 - Navigate to the backend directory:
-bash
+```bash
 cd Backend
+```
 - Install dependencies:
- bash
+```bash
 npm install
+```
 - Start the development server:
-bash
+```bash
 npm run dev
+```
 ### Set Up Frontend
 - Open a new terminal and navigate to the frontend directory:
-bash
+```bash
 cd Frontend
+```
 - Install dependencies:
- bash
+ ```bash
 npm install
+```
 - Start the development server:
- bash
+ ```bash
 npm run dev
+```
 ## Usage
 After setting up the project, open your browser and go to:
 
-http://localhost:5173
+`http://localhost:5173`
 
 ## Technologies Used
 - Frontend:
